@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    image: aprova-digital/nestjs-mockup
+    build: 
+      context: .
+    restart: unless-stopped
+    ports:
+      - '$PORT:4000'
+    command: npm run start
